@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: nodejs
-        image: <ECR_IMAGE_URL>
+        image: sudarmohan007/node-service
         ports:
-        - containerPort: <port>
+        - containerPort: 3000
         envFrom:
         - configMapRef:
             name: nodejs-config
