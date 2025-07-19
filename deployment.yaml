@@ -17,3 +17,5 @@ spec:
         image: 202403775442.dkr.ecr.ap-south-1.amazonaws.com/node-service:latest
         ports:
         - containerPort: 3000
+      imagePullSecrets:
+      - name: ecr-secret  # 👈 this is important!
