@@ -6,7 +6,7 @@ spec:
   selector:
     app: nodejs
   ports:
-    - port: 3000
+    - port: 30
       targetPort: 3000
   type: ClusterIP
 
