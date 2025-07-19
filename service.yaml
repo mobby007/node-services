@@ -5,10 +5,11 @@ metadata:
   labels:
     app: node-service
 spec:
-  type: ClusterIP
-  selector:
+  selector:             # ✅ This line was fine, but YAML indenting needs to be perfect
     app: node-service
+  type: ClusterIP
   ports:
     - protocol: TCP
-      port: 3000        # Port exposed within the cluster
+      port: 3000        # Port exposed inside the cluster
       targetPort: 3000  # Port exposed by the Node.js container
+
