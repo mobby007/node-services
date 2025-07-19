@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: node-service
 spec:
-  type: LoadBalancer   # 🔁 This is the key change
+  type: LoadBalancer
   selector:
-    app: node-service
+    app: node-service  # must match your node.js deployment label
   ports:
     - protocol: TCP
       port: 3000
       targetPort: 3000
+
