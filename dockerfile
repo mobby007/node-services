@@ -1,20 +1,18 @@
-# Use a minimal Node.js base image
+# Use an official Node.js Alpine image
 FROM node:18-alpine
 
-# Create app directory
+# Set working directory inside container
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
-
-# Install app dependencies
+# Install dependencies
+COPY package.json package-lock.json ./
 RUN npm install
 
-# Copy app source
+# Copy the rest of the app
 COPY . .
 
-# Expose the port the app runs on
+# Expose app port
 EXPOSE 3000
 
-# Run the application
+# Start the application
 CMD ["node", "app.js"]
