@@ -1,13 +1,13 @@
 apiVersion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: node-service
 spec:
-  type: LoadBalancer   # 👈 change this line
+  type: LoadBalancer   
   selector:
     app: nodejs
   ports:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-
